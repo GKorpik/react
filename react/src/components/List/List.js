@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './List.scss';
 import Hero from '../Hero/Hero';
 import PropTypes from 'prop-types';
-import Column from "../Column/Column";
+import Column from '../Column/Column';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator';
@@ -13,14 +13,14 @@ class List extends React.Component {
   }; 
 
   static propTypes = {
-  title: PropTypes.node.isRequired,
-  image: PropTypes.string.isRequired,
-  description: PropTypes.node,
-  columns: PropTypes.array,
+    title: PropTypes.node.isRequired,
+    image: PropTypes.string.isRequired,
+    description: PropTypes.node,
+    columns: PropTypes.array,
   };
 
   static defaultProps = {
-  description: settings.defaultListDescription,
+    description: settings.defaultListDescription,
   };
   
   addColumn(title){
@@ -32,9 +32,9 @@ class List extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []          
-          }
-        ]
+            cards: [],        
+          },
+        ],
       }
     ));
   }

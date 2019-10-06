@@ -5,7 +5,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 const Hero = props => {
   Hero.propTypes = {
-  	titleText: PropTypes.node.isRequired,
+    titleText: PropTypes.node.isRequired,
   };
   return(
     <header className ={styles.component}>
