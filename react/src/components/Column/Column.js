@@ -25,7 +25,7 @@ class Column extends React.Component {
   addCard(title){
     this.setState(state => (
       {
-        columns: [
+        cards: [
           ...state.cards,
           {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
@@ -43,12 +43,12 @@ class Column extends React.Component {
       <section className ={styles.component}>
         <h3 className ={styles.title}>
         <span className={styles.icon}>
-        <Icon name={Icon} />
+          <Icon name={Icon} />
         </span>
         {this.props.title}</h3>
         <div className={styles.cards}>
           {this.state.cards.map(({key, ...cardsProps}) => (
-            <Column key={key} {...cardsProps} />
+            <Card key={key} {...cardsProps} />
           ))}
         </div>
         <div className={styles.creator}>
