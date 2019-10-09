@@ -12,7 +12,7 @@ class Column extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     cards: PropTypes.array,
-    icon: PropTypes.func.isRequired,
+    icon: PropTypes.string.isRequired,
   };
   
   static defaultProps = {
@@ -22,6 +22,7 @@ class Column extends React.Component {
 
   render(){
     const {title, icon, cards} = this.props;
+    console.log('this',this.props);
     return(
       <section className ={styles.component}>
         <h3 className ={styles.title}>
