@@ -13,7 +13,7 @@ class Card extends React.Component {
     return(
 
       <div className ={styles.component}>
-        <h3 className ={styles.title}>{ttitle}</h3>
+        <h3 className ={styles.title}>{title}</h3>
       </div>
     );
   }
